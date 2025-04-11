@@ -13,18 +13,35 @@ const LogoTicker: React.FC = () => {
   ];
 
   return (
-    <div className="logo-ticker bg-gray-50 py-8">
-      <div className="logo-track">
-        {logoUrls.concat(logoUrls).map((logo, index) => (
-          <img 
-            key={index} 
-            src={logo} 
-            alt={`Client ${index % logoUrls.length + 1}`} 
-            className="grayscale hover:grayscale-0 transition-all duration-300"
-          />
-        ))}
+    <section className="relative w-full overflow-hidden bg-gray-50 py-8">
+      <div className="flex w-full">
+        {/* First set of logos */}
+        <div className="logo-slider flex animate-marquee whitespace-nowrap">
+          {logoUrls.map((logo, index) => (
+            <div key={`first-${index}`} className="mx-8 flex items-center justify-center">
+              <img 
+                src={logo} 
+                alt={`Client ${index + 1}`} 
+                className="h-8 w-auto transition-all duration-300 grayscale hover:grayscale-0 opacity-50 hover:opacity-100"
+              />
+            </div>
+          ))}
+        </div>
+        
+        {/* Duplicate set of logos for seamless looping */}
+        <div className="logo-slider flex animate-marquee whitespace-nowrap">
+          {logoUrls.map((logo, index) => (
+            <div key={`second-${index}`} className="mx-8 flex items-center justify-center">
+              <img 
+                src={logo} 
+                alt={`Client ${index + 1}`} 
+                className="h-8 w-auto transition-all duration-300 grayscale hover:grayscale-0 opacity-50 hover:opacity-100"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

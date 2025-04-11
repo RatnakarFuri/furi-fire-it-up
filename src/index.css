@@ -84,6 +84,25 @@
   .stagger-animate > *:nth-child(5) { animation-delay: 0.9s; }
 }
 
+/* Logo ticker animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.logo-slider:hover {
+  animation-play-state: paused;
+}
+
+/* Keep existing code from here */
 .logo-ticker {
   overflow: hidden;
   white-space: nowrap;
