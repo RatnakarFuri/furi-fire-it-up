@@ -98,6 +98,10 @@
   animation: marquee 30s linear infinite;
 }
 
+.animate-marquee-fast {
+  animation: marquee 15s linear infinite;
+}
+
 .logo-slider:hover {
   animation-play-state: paused;
 }

@@ -15,7 +15,7 @@ const LogoTicker: React.FC = () => {
     <section className="relative w-full overflow-hidden bg-gray-50 py-8">
       <div className="flex w-full">
         {/* First set of logos */}
-        <div className="logo-slider flex animate-marquee whitespace-nowrap">
+        <div className="logo-slider flex animate-marquee-fast whitespace-nowrap">
           {logoUrls.map((logo, index) => (
             <div key={`first-${index}`} className="mx-8 flex items-center justify-center">
               <img 
@@ -28,7 +28,7 @@ const LogoTicker: React.FC = () => {
         </div>
         
         {/* Duplicate set of logos for seamless looping */}
-        <div className="logo-slider flex animate-marquee whitespace-nowrap">
+        <div className="logo-slider flex animate-marquee-fast whitespace-nowrap">
           {logoUrls.map((logo, index) => (
             <div key={`second-${index}`} className="mx-8 flex items-center justify-center">
               <img 

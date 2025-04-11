@@ -99,6 +99,7 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'fade-in-right': 'fade-in-right 0.6s ease-out',
 				'marquee': 'marquee 30s linear infinite',
+				'marquee-fast': 'marquee 15s linear infinite',
 			}
 		}
 	},
